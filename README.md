@@ -17,7 +17,7 @@ pip install -r requirements.txt
 cd datasets
 sh download_ls.sh
 sh download_mrc.sh
-sh download_ls.sh
+sh download_rc.sh
 ```
 For French MRC, you need to request access to FQuAD through this [application form](https://fquad.illuin.tech/).
 After download it, please create FQuAD folder and place train.json and valid.json under FQuAD folder like ./datasets/FQuAD/valid.json
