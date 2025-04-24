@@ -75,7 +75,7 @@ def activation(save_dir):
 
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
-    torch.save(final_indice, f"./../neuron/activation/activation_mask/{model_name_ease}")  
+    torch.save(final_indice, f"{save_dir}/{model_name_ease}")  
 
 save_dir = f'./../neuron/activation/activation_mask'
 activation(save_dir)

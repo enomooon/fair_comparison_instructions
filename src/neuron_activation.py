@@ -83,7 +83,7 @@ def main():
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
 
-    torch.save(output, f'./../neuron/activation/activation.{lang}.train.{model_name_ease}')
+    torch.save(output, f'{save_dir}/activation.{lang}.train.{model_name_ease}')
 
 if __name__=='__main__':
     main()
