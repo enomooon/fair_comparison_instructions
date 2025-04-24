@@ -24,7 +24,7 @@ After download it, please create FQuAD folder and place train.json and valid.jso
 
 ## Fair Instruction Construction (Section 3.1)
 The instructions for each language created in this study are available in `prompt_template.py`.
-If you would like to create additional instructions, you can do so using the method described below.
+If you would like to create additional instructions, you can do so using the method below and incorporating revisions by native speakers as described in Step 4.
 
 #### Example for Step 2 in Section 3.1
 ```
@@ -40,8 +40,10 @@ Please specify the output from Step 2 for `--inst_en_step3` and `--inst_tgt_step
 python make_instruction_gpt4.py 
     --step step3 
     --lang ja 
-    --inst_en_step3 'I will provide a review.\nPlease rate the given review based on the following criteria.\nChoose "1" if the review indicates a high evaluation and "0" if it indicates a low evaluation.' 
-    --inst_tgt_step3 '私はこれからレビューを提供します。\nレビューを以下の基準に基づいて評価してください。\n高い評価を示すレビューの場合は「1」を、低い評価を示すレビューの場合は「0」を選んでください。'
+    --inst_en_step3 'I will provide a sentence and a word included in the sentence.
+Please generate a simpler Japanese synonym for the word.
+Generate nothing but the synonym.' 
+    --inst_tgt_step3 '私は文とその中に含まれる単語を提供します。提供された単語に対して、より簡単な日本語の同義語を一つ生成してください。同義語以外は何も生成しないでください。' 
 ```
 
 ## Inference (Section 4)
@@ -100,7 +102,7 @@ python detect_lang_and_follow.py
 
 #### Detecting of Language Specific Neurons
 We identify language-specific neurons using LAPE ([Tang et al., 2024](https://aclanthology.org/2024.acl-long.309/)).
-For this purpose, we use the [dataset](https://github.com/kojima-takeshi188/lang_neuron/tree/main/assets/Language/sense) created by [Kojima et al.](https://aclanthology.org/2024.naacl-long.384/).
+For this purpose, we prepare the language-specific text files required by LAPE using this [dataset](https://github.com/kojima-takeshi188/lang_neuron/tree/main/assets/Language/sense).
 Please place the dataset under the datasets folder like `datasets/neuron/assets/Language/sense/ja.json`.
 
 ```
