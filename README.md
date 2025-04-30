@@ -1,7 +1,7 @@
 # fair_comparison_instructions
 Code for "[A Fair Comparison without Translationese: English vs. Target-language Instructions for Multilingual LLMs](https://aclanthology.org/2025.naacl-short.55/)" and "[多言語大規模言語モデルにおける英語指示文と対象言語指示文の公平な比較](https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P7-12.pdf)"
 
-In addition to the content of the former paper, the latter Japanese paper analyzes the relationship between the instruction language and the activate neurons in LLMs.
+In addition to the content of the former paper, the latter Japanese paper analyzes the relationship between instruction languages and activate neurons in LLMs.
 
 ## Environment
 
@@ -40,10 +40,8 @@ Please specify the output from Step 2 for `--inst_en_step3` and `--inst_tgt_step
 python make_instruction_gpt4.py 
     --step step3 
     --lang ja 
-    --inst_en_step3 'I will provide a sentence and a word included in the sentence.
-Please generate a simpler Japanese synonym for the word.
-Generate nothing but the synonym.' 
-    --inst_tgt_step3 '私は文とその中に含まれる単語を提供します。提供された単語に対して、より簡単な日本語の同義語を一つ生成してください。同義語以外は何も生成しないでください。' 
+    --inst_en_step3 'I will provide a sentence and a word included in the sentence. \nPlease generate a simpler Japanese synonym for the word. \nGenerate nothing but the synonym.' 
+    --inst_tgt_step3 '私は文とその中に含まれる単語を提供します。 \n提供された単語に対して、より簡単な日本語の同義語を一つ生成してください。 \n同義語以外は何も生成しないでください。' 
 ```
 
 ## Inference (Section 4)
