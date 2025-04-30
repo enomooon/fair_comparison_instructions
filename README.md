@@ -1,7 +1,7 @@
 # fair_comparison_instructions
-Code for "A Fair Comparison without Translationese: English vs. Target-language Instructions for Multilingual LLMs" and "[多言語大規模言語モデルにおける英語指示文と対象言語指示文の公平な比較](https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P7-12.pdf)"
+Code for "[A Fair Comparison without Translationese: English vs. Target-language Instructions for Multilingual LLMs](https://aclanthology.org/2025.naacl-short.55/)" and "[多言語大規模言語モデルにおける英語指示文と対象言語指示文の公平な比較](https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P7-12.pdf)"
 
-In addition to the content of the former paper, the latter Japanese paper analyzes the relationship between the instruction language and the activated neurons.
+In addition to the content of the former paper, the latter Japanese paper analyzes the relationship between the instruction language and the activate neurons in LLMs.
 
 ## Environment
 
